@@ -1,5 +1,5 @@
 # vkrc-manual-upgrade
-Off-line manual upgrade of VKRC programs 
+Off-line manual upgrade of VKRC programs.
 
 1. Start the PowerShell console under Windows.
 2. Go to the directory with VKRCManualUpgrade.ps1 script.
