@@ -30,15 +30,15 @@ try {
     $datFileStreamIn  = new-object System.IO.FileStream($datFileStreamInPath, [System.IO.FileMode]::Open, [System.IO.FileAccess]::Read )
     $datFileStreamOut = new-object System.IO.FileStream($datFileStreamOutPath, [System.IO.FileMode]::Create, [System.IO.FileAccess]::Write )
 
-	$instance.GenerateCode( $moduleName, $srcFileStreamIn, $datFileStreamIn, $srcFileStreamOut, $datFileStreamOut )
+    $instance.GenerateCode( $moduleName, $srcFileStreamIn, $datFileStreamIn, $srcFileStreamOut, $datFileStreamOut )
   
-	$datFileStreamIn.close()
-	$datFileStreamOut.close()
+    $datFileStreamIn.close()
+    $datFileStreamOut.close()
 
-	Move-Item $datFileStreamOutPath $datFileStreamInPath -force
+    Move-Item $datFileStreamOutPath $datFileStreamInPath -force
 
   } else {
-	$instance.GenerateCode( $moduleName, $srcFileStreamIn, $srcFileStreamOut )
+    $instance.GenerateCode( $moduleName, $srcFileStreamIn, $srcFileStreamOut )
   }
 
   $srcFileStreamIn.close()
